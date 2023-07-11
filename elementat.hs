@@ -1,10 +1,4 @@
 elementAt :: [a] -> Int -> Maybe a
-elementAt xs n = do
-    
+elementAt (x:xs) 1 = Just x
+elementAt (x:xs) n = elementAt xs (n-1)
 
-
-
-readLines :: Int -> [String] -> [String]
-readLines n lines = do
-    line <- getLine
-    readLines (n - 1) (line : lines)
